@@ -1,0 +1,130 @@
+
+body {
+	font-family: Arial, Helvetica, Sans-serif;
+	color: black;
+	background-color: #B0E0E6;
+	font-size: 18px;
+	line-height: 1.2;
+	margin: 0;
+	text-align: center;
+}
+
+h1,h2,h3{
+	color: #404042;
+	text-align: center;
+}
+
+.container{
+	width: 900px;
+	margin: 60px auto; /*separacion de otro elemento*/
+}
+
+.banner{
+	background-image: url('images/backgroundInf.jpg');
+	background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.banner h1{
+	color: #0000ff;
+	font-size: 2.5em;
+	margin: 0;
+	letter-spacing: 5px;
+}
+
+.banner p{
+	/*color: black; 
+	text-shadow: white 0.1em 0.1em 0.2em;*/
+	text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+	font-size: 1.3em;
+	font-weight: bold; 
+	opacity: 0.8;
+}
+
+h2{
+	margin: 60px auto;
+  	color: black; 
+  	text-shadow: #9a34a5 0.1em 0.1em 0.2em ;
+	text-transform: capitalize;
+}
+
+.card-head{
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	box-shadow: 0 0 20px #080117;
+	border-radius: 6px;
+	padding: 24px;
+	margin: 8px;
+	flex-grow: 1;
+}
+
+.card-head img{
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #080117;
+}
+
+.card-head h3{ 	margin-bottom: 0; }
+
+a:link, a:visited, a:active a:focus a:hover{     text-decoration:none; }
+a{	color: rgba(5,8,142,1) 50%; }
+
+/*cuando pase el mouse sobre la tarjeta*/
+.imgHover:hover{
+/*
+transform: rotateY(390deg);
+transform-style: preserve-3d;}
+*/
+border-radius:10%;
+box-shadow: 0px 0px 15px 15px #ec731e;
+transform: rotate(350deg);
+}
+
+.footer{
+	background: #00FA9A;
+	color: #000116;
+	padding: 5px 0px;
+}
+
+.cards{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 16px;
+}
+
+.cards.flex{
+	display: flex;
+}
+
+
+/* resolucion para cuando es pantalla chica*/
+@media (min-width: 300px){
+	.container{
+		width: 400px;
+	}
+	.cards{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 700px){
+	.container{
+		width: 600px;
+	}
+	.cards{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 1000px){
+	.container{
+		width: 900px;
+	}
+	.cards{
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
