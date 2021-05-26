@@ -6,7 +6,6 @@ body {
 	font-size: 18px;
 	line-height: 1.2;
 	margin: 0;
-	text-align: center;
 }
 
 h1,h2,h3{
@@ -14,9 +13,17 @@ h1,h2,h3{
 	text-align: center;
 }
 
+p{ text-align: center; }
+
 .container{
 	width: 900px;
 	margin: 60px auto; /*separacion de otro elemento*/
+}
+
+.indexhome a{	/*contenedor para regresar al index*/
+  	color: black; 
+  	text-shadow: #ffd700 0.1em 0.1em 0.2em ;
+  	text-align: left;
 }
 
 .banner{
@@ -51,6 +58,7 @@ h2{
 	text-transform: capitalize;
 }
 
+
 .card-head{
 	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 	box-shadow: 0 0 20px #080117;
@@ -63,6 +71,14 @@ h2{
 .card-head img{
 	width: 100%;
 	height: 180px;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #080117;
+}
+
+.card-head img#cien{
+	width: 270px;
+	height: 155px;
 	object-fit: cover;
 	border-radius: 5px;
 	box-shadow: 0 0 5px #080117;
@@ -106,6 +122,9 @@ transform: rotate(350deg);
 	.container{
 		width: 400px;
 	}
+	.indexhome a{
+		width: 130px;
+	}
 	.cards{
 		grid-template-columns: 1fr;
 	}
@@ -114,6 +133,9 @@ transform: rotate(350deg);
 @media (min-width: 700px){
 	.container{
 		width: 600px;
+	}
+		.indexhome a{
+		width: 200px;
 	}
 	.cards{
 		grid-template-columns: 1fr 1fr;
@@ -124,7 +146,11 @@ transform: rotate(350deg);
 	.container{
 		width: 900px;
 	}
+	.indexhome a{
+		width: 300px;
+	}
 	.cards{
 		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
+
